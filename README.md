@@ -8,11 +8,7 @@
 | #6 | En tant que de chef de projet, je souhaite que la colonne "user story " soit pré-construite avec les mots clés  "en tant que", "je souhaite", "afin de", afin de structurer mes user stories.  |             |            |             |    x     |        |
 | #7 | En tant que chef de projet/développeur, je souhaite  visualiser mes user stories   |             |            |             |    x     |        |
 | #8 | En tant que chef de projet, je souhaite modifier/supprimer mes user stories.     | Pour cela je peux cliquer sur le bouton modifier ou supprimer à droite de chaque user story   |            |             |    x     |        |
-| #9 |       |             |            |             |    x     |        |
-| #10 |       |             |            |             |    x     |        |
-| #3 |       |             |            |             |    x     |        |
-| #3 |       |             |            |             |    x     |        |
-| #3 |       |             |            |             |    x     |        |
-| #3 |       |             |            |             |    x     |        |
-| #3 |       |             |            |             |    x     |        |
-| #3 |       |             |            |             |    x     |        |
+| #9 | En tant que chef de projet/developpeur, je souhaite télécharger un document pour un sprint particulier, afin de regrouper les informations de ce sprint. Pour cela je clique sur le bouton exporter un sprint        |         |    x     |        |
+| #10 |  En tant que dev, je souhaite  ajouter mes taches dans un espace dédié afin de pouvoir gerer mes taches. Pour cela,  je dois renseigner un id , tâche, un nom du composant , le chemin, description du composant, coût de la tâche, dépendances avec d'autres tâches       |            |    x     |        |
+| #11 | En tant que chef de projet/développeur, je souhaite visualiser mes tâches    |             |    x     |        |
+| #12 | En tant que chef de projet, je souhaite modifier/supprimer mes tâches. Pour cela je peux cliquer sur le bouton modifier ou supprimer à droite de chaque tâche   |            |   x     |        |
