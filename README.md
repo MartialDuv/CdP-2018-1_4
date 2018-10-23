@@ -1,5 +1,5 @@
 | id | user story  | difficulté | priorité | sprint |
-|----|-------|-------------|------------|-------------|----------|--------|
+|----|-------|-------------|------------|-------------|
 | #1 | En tant que visiteur, je souhaite pouvoir m'enregistrer en tant de chef de projet afin de créer un projet. Pour cela je dois remplir un formulaire composé de : nom, prénom, identifiant, mot de passe (semblable au formulaire du développeur).           |          |    x     |        |
 | #2 |  En tant que visiteur, je souhaite pouvoir m'enregistrer en tant que développeur afin de rejoindre un projet. Pour cela, je dois remplir un formulaire composé de : nom, prénom, identifiant, mot de passe (semblable au formulaire du chef de projet).     |                   |    x     |        |
 | #3 |  En tant que chef de projet , je souhaite pouvoir créer un projet. Pour cela, je dois renseigner sur un formulaire dédiée : le nom du projet, une thématique, le propriétaire, le client, le nombre de développeurs et une estimation de la durée. |                   |    x     |        |
