@@ -1,5 +1,5 @@
 | id | description | nom composant | chemin | id us | dépendances | état | dévoloppeur |
-|----|------------|---------------|--------|-------|-------------|
+|----|------------|---------------|--------|-------|-------------|----|-----|
 | TA | Ajout du docker au projet. | Docker  |  docker.ymd   |  x   |  x   | TO DO | |
 | TB | Page d'accueil comprenant la liste des projets et un bouton "créer un projet" qui redirige vers la création d'un projet. | Page des projets |  index.html, index.js | #3 |      | TO DO | |
 | TC | Page du formulaire pour la création de projet et bouton "créer" pour finaliser la création. | Formulaire de création de projet | creaproject.html  | #3 |  | TO DO | |
