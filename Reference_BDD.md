@@ -15,28 +15,29 @@ Développeur
 
 Autorisation
 -------------
-| __id_projet__ | __id_developpeur__ |
+| *id_projet* | *id_developpeur* |
 |---------------|--------------------|
 |type/mode|type_mode|
 
 User_Story
 -------------
-| id_us | description  | difficulte | priorite | sprint | __id_projet__ |
+| id_us | description  | difficulte | priorite | sprint | *id_projet* |
 |-------|--------------|------------|----------|--------|---------------|
 |type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
 
 Sprint
 -------------
-| id_sprint | __id_projet__ |
+| id_sprint | *id_projet* |
 |-----------|---------------|
 |type/mode|type/mode|
 
 Tache
 ------------
-| id_tache | __id_us__ | description | nom_composant | chemin_ressource | description_composant | dependance_tache | __id_sprint |
+| id_tache | *id_us* | description | nom_composant | chemin_ressource | description_composant | dependance_tache | *id_sprint* |
 |----------|-----------|-------------|---------------|------------------|-----------------------|------------------|----------------|
 |type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
 
 <!--
 Il faut préciser le type de chaque attribut ainsi que son mode éventuel (auto increment par exemple)
+Les clés étrangères sont en italique
  -->
