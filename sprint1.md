@@ -3,10 +3,10 @@
 | T1 | Ajout du docker au projet. | Docker  |  docker.ymd   |  x   |  x   | TO DO | Martial, Mary, Mathieu |
 | T2 | Création du script project.sql. | Base de données |  project.sql| x |   x   | TO DO | |
 | T3 | Implémentation du script project.sql qui crée les tables de la base de données ainsi que leur champs respectifs. |  Base de données |  project.sql| x |  T2    | TO DO | |
-| T4 | Création de la page d'accueil comprenant la liste des projets et la possibilité de créer un projet. | Page d'accueil |  index.html, index.js | #3 |   x   | TO DO | |
-| T5 | Implémentation de la page d'accueil avec un bouton "créer un projet" qui redirige vers la création d'un projet, et une liste récupérant tous les projets existant de la base de données. | Page d'accueil |  index.html, index.js | #3 |   T4   | TO DO | |
-| T6 | Création de la page du formulaire de création de projet. | Formulaire de création de projet | creaproject.html  | #3 |  | TO DO | |
-| T7 | Implémentation de la page du formulaire pour la création de projet et du bouton "créer" pour finaliser la création. Le formulaire comprend les champs décrits dans l'user story #3. | Formulaire de création de projet | creaproject.html  | #3 |  | TO DO | |
+| T4 | Création de la page d'accueil comprenant la liste des projets et la possibilité de créer un projet. | Page d'accueil |  index.html, index.js | #3 |   x   | DOING | Mary |
+| T5 | Implémentation de la page d'accueil avec un bouton "créer un projet" qui redirige vers la création d'un projet, et une liste récupérant tous les projets existant de la base de données. | Page d'accueil |  index.html, index.js | #3 |   T4   | DOING | Mary |
+| T6 | Création de la page du formulaire de création de projet. | Formulaire de création de projet | creaproject.html  | #3 |  | TO DO | Mary |
+| T7 | Implémentation de la page du formulaire pour la création de projet et du bouton "créer" pour finaliser la création. Le formulaire comprend les champs décrits dans l'user story #3. | Formulaire de création de projet | creaproject.html  | #3 |  | TO DO | Mary |
 | T8 | Création du fichier creaproject.js. | Formulaire de création de projet | creaproject.js  | #3  | TC | TO DO | |
 | T9 | Implémentation de l'ajout d'un projet dans la base de données lorsque le bouton "créer" est cliqué et redirection vers la page d'accueil. S'il manque un champs obligatoire, une alerte "remplir tous les champs" s'affichent et le projet n'est pas créé. | Formulaire de création de projet | creaproject.js  | #3  | TC | TO DO | |
 | T10 | Création de la page du formulaire d'ajout d'une user story. | Formulaire d'ajout d'une user story | add_us.html | #8 | TE  | TO DO | Martial |
