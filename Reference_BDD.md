@@ -1,39 +1,39 @@
 Liste des tables
 =================
 
-Projet
+project
 -----------------
-| id_projet | nom  | thematique | proprietaire | client | nb_dev | estimation_duree |
+| project_id | name  | thematic | owner | client | nb_dev | estimate_time |
 |-----------|------|------------|--------------|--------|--------|------------------|
 |type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
 
-Développeur
+developer
 --------------
-| id_developpeur | nom  | prenom | mail | identifiant | mot_de_passe |
+| developer_id | last_name  | first_name | e-mail | login | password |
 |----------------|------|--------|------|-------------|--------------|
 |type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
 
-Autorisation
+project_membership
 -------------
-| *id_projet* | *id_developpeur* |
+| *project_id* | *developer_id* |
 |---------------|--------------------|
 |type/mode|type_mode|
 
-User_Story
+user_story
 -------------
-| id_us | description  | difficulte | priorite | sprint | *id_projet* |
+| us_id | *project_id*  | description | difficulty_level | priority | sprint|
 |-------|--------------|------------|----------|--------|---------------|
 |type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
 
-Sprint
+sprint
 -------------
-| id_sprint | *id_projet* |
+| sprint_id | *project_id* |
 |-----------|---------------|
 |type/mode|type/mode|
 
-Tache
+task
 ------------
-| id_tache | *id_us* | description | nom_composant | chemin_ressource | description_composant | dependance_tache | *id_sprint* |
+| task_id | *sprint_id* | *us_id* | description | component_name | component_path | component_description | task_dependency |
 |----------|-----------|-------------|---------------|------------------|-----------------------|------------------|----------------|
 |type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
 
