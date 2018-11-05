@@ -5,39 +5,39 @@ project
 -----------------
 | project_id | name  | thematic | owner | client | nb_dev | estimate_time |
 |-----------|------|------------|--------------|--------|--------|------------------|
-|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
+|int/autoincrement|varchar(80)/NotNULL|varchar(255)/NotNULL|varchar(80)/NULL|varchar(80)/NULL|int/NULL|varchar(80)/NotNULL|
 
 developer
 --------------
 | developer_id | last_name  | first_name | e-mail | login | password |
 |----------------|------|--------|------|-------------|--------------|
-|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
+|int/autoincrement|varchar(80)/NotNULL|varchar(80)/NotNULL|varchar(255)/NotNULL|varchar(30)/NotNULL|varchar(50)/NotNULL|
 
 project_membership
 -------------
 | *project_id* | *developer_id* |
 |---------------|--------------------|
-|type/mode|type_mode|
+|int|int|
 
 user_story
 -------------
 | us_id | *project_id*  | description | difficulty_level | priority | sprint|
 |-------|--------------|------------|----------|--------|---------------|
-|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
+|int/NotNULL|int|text/NotNULL|int/NULL|varchar(4)/NULL|varchar(20)/NULL|
 
 sprint
 -------------
 | sprint_id | *project_id* |
 |-----------|---------------|
-|type/mode|type/mode|
+|int/autoincrement|int|
 
 task
 ------------
 | task_id | *sprint_id* | *us_id* | description | component_name | component_path | component_description | task_dependency |
 |----------|-----------|-------------|---------------|------------------|-----------------------|------------------|----------------|
-|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|type/mode|
+|int/NotNULL|int|int/NotNULL|text/NotNULL|varchar(80)/NotNULL|varchar(255)/NULL|text/NULL|text/NULL|
 
 <!--
-Il faut préciser le type de chaque attribut ainsi que son mode éventuel (auto increment par exemple)
+Les identifiants de chaque table ne peuvent pas être NULL
 Les clés étrangères sont en italique
  -->
