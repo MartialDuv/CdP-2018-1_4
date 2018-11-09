@@ -14,36 +14,49 @@
   <hr class="my-6">
       <div class="container">
         <form>
-          <div class="form-group">
-            <label for="InputProjectName">Nom du projet(*)</label>
-            <input type="projectName" class="form-control" id="InputProjectName" placeholder="Entrer le nom du projet">
+          <div class="form-group row">
+            <label for="InputProjectName" class="col-sm-3 col-form-label"><b>Nom du projet <span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-6">
+              <input type="projectName" class="form-control" id="InputProjectName" placeholder="Entrer le nom du projet">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="InputTheme">Thématique du projet(*)</label>
-            <input type="theme" class="form-control" id="InputTheme" placeholder="Entrer la thématique du projet">
+          <div class="form-group row">
+            <label for="InputTheme" class="col-sm-3 col-form-label"><b>Thématique du projet <span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-6">
+              <input type="theme" class="form-control" id="InputTheme" placeholder="Entrer la thématique du projet">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="InputOwner">Propriétaire du projet</label>
-            <input type="owner" class="form-control" id="InputOwner" placeholder="Entrer le propriétaire du projet">
+          <div class="form-group row">
+            <label for="InputOwner" class="col-sm-3 col-form-label"><b>Propriétaire du projet</b></label>
+            <div class="col-sm-6">
+              <input type="owner" class="form-control" id="InputOwner" placeholder="Entrer le propriétaire du projet">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="InputClient">Client du projet</label>
-            <input type="client" class="form-control" id="InputClient" placeholder="Entrer le client du projet">
+          <div class="form-group row">
+            <label for="InputClient" class="col-sm-3 col-form-label"><b>Client du projet</b></label>
+            <div class="col-sm-6">
+              <input type="client" class="form-control" id="InputClient" placeholder="Entrer le client du projet">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="InputNbDeveloper">Nombre de développeurs du projet</label>
-            <input type="nbdeveloper" class="form-control" id="InputNbDeveloper" placeholder="Entrer le nombre de développeur du projet">
+          <div class="form-group row">
+            <label for="InputNbDeveloper" class="col-sm-3 col-form-label"><b>Nombre de développeurs du projet</b></label>
+            <div class="col-sm-6">
+              <input type="nbdeveloper" class="form-control" id="InputNbDeveloper" placeholder="Entrer le nombre de développeur du projet">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="InputDuration">Estimation de la durée du projet</label>
-            <input type="client" class="form-control" id="InputDuration" placeholder="Entrer l'estimation de la durée du projet">
+          <div class="form-group row">
+            <label for="InputDuration" class="col-sm-3 col-form-label"><b>Estimation de la durée du projet</b></label>
+            <div class="col-sm-6">
+              <input type="client" class="form-control" id="InputDuration" placeholder="Entrer l'estimation de la durée du projet">
+            </div>
           </div>
-          <div class="form-group">
-            <small id="ProjectHelp" class="form-text text-muted">(*) : Les champs sont obligatoires</small>
+          <div class="form-group row">
+            <small id="ProjectHelp" class="form-text text-muted"><span style="color:#FF0000";>*</span> : Les champs sont obligatoires</small>
           </div>
           
-          
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="text-center">
+            <button type="submit" class="btn btn-info btn-lg" id="button-submit">Créer</button>
+          </div>
         </form>
       </div>
     
