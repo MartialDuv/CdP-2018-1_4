@@ -31,7 +31,7 @@ Tâches du sprint 2
 | T14 | Implémentation du bouton "Modifier" à côté de chaque projet de la liste. | index.html | src/html/index.html | #5 | T3, T4  | TO DO | x | 0.5 |
 | T15 | Création de la page de visualisation du backlog comprenant la liste des "user story" ainsi que des boutons "Modifier" et "Supprimer" à côté de chaque "user story" et un bouton "Ajouter une user story". | backlog.html, backlog.js | src/html/backlog.html, src/js/backlog.js | #9 | x  | TO DO | x | 0.5 |
 | T16 | Implémentation de la page de visualisation du backlog montrant la liste des "user story" et les boutons. | backlog.html | src/html/backlog.html | #9, #11, #12 | T3, T15  | TO DO | x | 1 |
-| T27 | Implémentation des opérations de redirection vers les formulaires d'ajout/modification et le déclenchement d'une pop-up d'avertissement de suppression. | backlog.js | src/js/backlog.js | #9, #11, #12 | T3, T15  | TO DO | x | 1 |
+| T17 | Implémentation des opérations de redirection vers les formulaires d'ajout/modification et le déclenchement d'une pop-up d'avertissement de suppression. | backlog.js | src/js/backlog.js | #9, #11, #12 | T3, T15  | TO DO | x | 1 |
 
 
 <!--
