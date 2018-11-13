@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Création de projet</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header><h1 class="display-4 text-black text-center">Création de projet</h1></header>
+  <hr class="my-6">
+      <div class="container">
+        <form>
+          <div class="form-group row">
+            <label for="InputProjectName" class="col-sm-3 col-form-label"><b>Nom du projet <span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-6">
+              <input type="projectName" class="form-control" id="InputProjectName" placeholder="Entrer le nom du projet">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputTheme" class="col-sm-3 col-form-label"><b>Thématique du projet <span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-6">
+              <input type="theme" class="form-control" id="InputTheme" placeholder="Entrer la thématique du projet">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputOwner" class="col-sm-3 col-form-label"><b>Propriétaire du projet</b></label>
+            <div class="col-sm-6">
+              <input type="owner" class="form-control" id="InputOwner" placeholder="Entrer le propriétaire du projet">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputClient" class="col-sm-3 col-form-label"><b>Client du projet</b></label>
+            <div class="col-sm-6">
+              <input type="client" class="form-control" id="InputClient" placeholder="Entrer le client du projet">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputNbDeveloper" class="col-sm-3 col-form-label"><b>Nombre de développeurs du projet</b></label>
+            <div class="col-sm-6">
+              <input type="nbdeveloper" class="form-control" id="InputNbDeveloper" placeholder="Entrer le nombre de développeur du projet">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputDuration" class="col-sm-3 col-form-label"><b>Estimation de la durée du projet</b></label>
+            <div class="col-sm-6">
+              <input type="client" class="form-control" id="InputDuration" placeholder="Entrer l'estimation de la durée du projet">
+            </div>
+          </div>
+          <div class="form-group row">
+            <small id="ProjectHelp" class="form-text text-muted"><span style="color:#FF0000";>*</span> : Les champs sont obligatoires</small>
+          </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-info btn-lg" id="button-submit">Créer</button>
+          </div>
+        </form>
+      </div>
+    
+</body>
+</html>
