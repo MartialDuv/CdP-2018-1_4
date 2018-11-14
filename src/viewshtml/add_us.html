@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Création d'une user story</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header><h1 class="display-4 text-black text-center">Création d'une user story</h1></header>
+  <hr class="my-6">
+      <div class="container">
+        <form>
+          <div class="form-group row">
+            <label for="InputUSId" class="col-sm-3 col-form-label"><b>Id<span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-2">
+              <input type="USId" class="form-control" id="InputUSId">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputDifficulty" class="col-sm-3 col-form-label"><b>Difficulté<span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-2">
+              <input type="difficulty" class="form-control" id="InputDifficulty">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputPriority" class="col-sm-3 col-form-label"><b>Priorité</b></label>
+            <div class="col-sm-2">
+              <select class="form-control" id="selectPriority">
+                <option>Basse</option>
+                <option>Moyenne</option>
+                <option>Haute</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputSprint" class="col-sm-3 col-form-label"><b>Sprint</b></label>
+            <div class="col-sm-2">
+              <input type="sprint" class="form-control" id="InputSprint">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputDescription" class="col-sm-3 col-form-label"><b>Description<span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-6">
+              <textarea type="description" class="form-control" id="InputDescription" style="resize:none;" rows="7"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <small id="ProjectHelp" class="form-text text-muted"><span style="color:#FF0000";>*</span> : Les champs sont obligatoires</small>
+          </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-info btn-lg" id="button-submit">Créer la user story</button>
+          </div>
+        </form>
+      </div>
+    
+</body>
+</html>
