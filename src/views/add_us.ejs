@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Ajouter d'une user story</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="text-center">
+      <!-- header -->
+      <main>
+          <div class="jumbotron">
+              <h1>Ajouter une user story</h1>
+              <p>Ajoute des user stories et soit le/la roi/reine de la conduite de projet</p>
+          </div>
+      </main>
+    </div>
+    <hr class="my-6">
+
+        <form>
+          <div class="form-group row">
+            <label for="InputUSId" class="col-sm-3 col-form-label"><b>Id<span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-2">
+              <input type="USId" class="form-control" id="InputUSId">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputDifficulty" class="col-sm-3 col-form-label"><b>Difficulté<span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-2">
+              <input type="difficulty" class="form-control" id="InputDifficulty">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputPriority" class="col-sm-3 col-form-label"><b>Priorité</b></label>
+            <div class="col-sm-2">
+              <select class="form-control" id="selectPriority">
+                <option>Basse</option>
+                <option>Moyenne</option>
+                <option>Haute</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputSprint" class="col-sm-3 col-form-label"><b>Sprint</b></label>
+            <div class="col-sm-2">
+              <input type="sprint" class="form-control" id="InputSprint">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InputDescription" class="col-sm-3 col-form-label"><b>Description<span style="color:#FF0000";>*</b></span></label>
+            <div class="col-sm-6">
+              <textarea type="description" class="form-control" id="InputDescription" style="resize:none;" rows="7"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <small id="ProjectHelp" class="form-text text-muted"><span style="color:#FF0000";>*</span> : Les champs sont obligatoires</small>
+          </div>
+
+          <div class="text-center">
+            <a href="/project"><input type="button" class="btn btn-info btn-lg"
+            value = "Ajouter"></a>
+            <a href="/project"><input type="button" class="btn btn-danger btn-lg"
+            value = "Annuler"></a>
+          </div>
+        </form>
+      </div>
+
+</body>
+</html>

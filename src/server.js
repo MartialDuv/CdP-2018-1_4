@@ -10,8 +10,16 @@ res.render('index');
 console.log("running");
 }).listen(3000);
 
-app.get('/project', function(req, res) {
+app.get('/creaproject', function(req, res) {
   res.render('creaproject');
+});
+
+app.get('/project', function(req, res) {
+  res.render('project');
+});
+
+app.get('/add_us', function(req, res) {
+  res.render('add_us');
 });
 
 app.use(function(req, res, next){
