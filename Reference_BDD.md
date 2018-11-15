@@ -5,7 +5,7 @@ project
 -----------------
 | project_id | name  | thematic | owner | client | nb_dev | estimate_time |
 |-----------|------|------------|--------------|--------|--------|------------------|
-|int/autoincrement|varchar(80)/NotNULL|varchar(255)/NotNULL|varchar(80)/NULL|varchar(80)/NULL|int/NULL|varchar(80)/NotNULL|
+|int/autoincrement|varchar(80)/NotNULL|varchar(255)/NotNULL|varchar(80)/NULL|varchar(80)/NULL|int/NULL|varchar(80)/NULL|
 
 developer
 --------------
