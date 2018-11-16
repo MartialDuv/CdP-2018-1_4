@@ -9,9 +9,9 @@ project
 
 developer
 --------------
-| developer_id | last_name  | first_name | e-mail | login | password |
+| developer_id | last_name  | first_name | email | login | password |
 |----------------|------|--------|------|-------------|--------------|
-|int/autoincrement|varchar(80)/NotNULL|varchar(80)/NotNULL|varchar(255)/NotNULL|varchar(30)/NotNULL|varchar(50)/NotNULL|
+|int/autoincrement|varchar(80)/NotNULL|varchar(80)/NotNULL|varchar(255)/NotNULL|varchar(30)/NotNULL|varchar(30)/NotNULL|
 
 project_membership
 -------------
@@ -33,9 +33,9 @@ sprint
 
 task
 ------------
-| task_id | *sprint_id* | *us_id* | description | component_name | component_path | component_description | task_dependency |
-|----------|-----------|-------------|---------------|------------------|-----------------------|------------------|----------------|
-|int/NotNULL|int|int/NotNULL|text/NotNULL|varchar(80)/NotNULL|varchar(255)/NULL|text/NULL|text/NULL|
+| task_id | *sprint_id* | *us_id* | description | component_name | component_path  | task_dependency |
+|----------|-----------|-------------|---------------|------------------|-----------------------|----------------|
+|int/NotNULL|int|int/NotNULL|text/NotNULL|varchar(80)/NotNULL|varchar(255)/NULL|text/NULL|
 
 <!--
 Les identifiants de chaque table ne peuvent pas être NULL
