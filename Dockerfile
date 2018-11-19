@@ -7,10 +7,12 @@ COPY package.json .
 
 #RUN npm init -y
 #RUN npm install express --save
+#RUN npm install ejs --save
+#RUN npm install -g selenium-side-runner --save
 RUN npm install
 
 # Copy everything
 COPY . .
 
 # Start server and expose port
-#CMD [ "node", "server.js" ]
+#CMD [ "node", "src/server.js" ]
