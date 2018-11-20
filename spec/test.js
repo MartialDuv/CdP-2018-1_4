@@ -5,9 +5,20 @@ const port = 3000;
 describe('Server', () => {
   let browser = undefined;
 //  let server = undefined;
+const args = [
+    "--disable-setuid-sandbox",
+    "--no-sandbox",
+  ];
+  const options = {
+    args,
+    headless: true,
+    ignoreHTTPSErrors: true,
+    dumpio: true,
+    //   ignoreSSL: true
+  };
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({args: ['--disable-setuid-sandbox', '--no-sandbox'], dumpio: true});
+    browser = await puppeteer.launch(options);
 
     const url = `http://localhost:3000/`;
     const page = await browser.newPage();
@@ -28,5 +39,5 @@ describe('Server', () => {
   });
 
   afterAll(() => {
-  })
+  })  
 });
