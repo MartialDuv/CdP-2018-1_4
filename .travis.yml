@@ -3,17 +3,24 @@ sudo: required
 
 language: node_js
 node_js:
-- "10"
+  - "10"
+
+services :
+  - docker
+
+addons:
+  apt:
+    packages:
+      - docker-ce
 
 notifications:
   email: false
 
 before_install:
+  - sudo docker-compose up -d
   - npm install puppeteer
   - npm install jasmine
 
-# services :
-#   docker-compose up
 
 script:
   - curl localhost:3000
