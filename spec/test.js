@@ -4,11 +4,16 @@ const port = 3000;
 
 describe('Server', () => {
   let browser = undefined;
-  let server = undefined;
+//  let server = undefined;
 
   beforeEach(async () => {
     browser = await puppeteer.launch({args: ['--disable-setuid-sandbox', '--no-sandbox'], dumpio: true});
-    server = this.app.listen(port, () => resolve(port));
+
+    const url = `http://localhost:3000/`;
+    const page = await browser.newPage();
+    await page.goto(url);
+
+  //  server = this.app.listen(port, () => resolve(port));
   });
 
   // afterEach(async () => {
@@ -16,12 +21,12 @@ describe('Server', () => {
   //   if (server) await server.stop();
   // });
 
-  it('serves a homepage with a title', async () => {
-    const url = `http://localhost:3000/`;
-    const page = await browser.newPage();
-    await page.goto(url);
-
+  it("jasmine puppeteer", async () => {
     const title = await page.title();
     expect(title).toBe('Accueil');
+    done();
   });
+
+  afterAll(() => {
+  })
 });
