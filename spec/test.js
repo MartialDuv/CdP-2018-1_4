@@ -8,24 +8,26 @@ describe('Server', () => {
 const args = [
     "--disable-setuid-sandbox",
     "--no-sandbox",
-  ];
-  const options = {
-    args,
-    headless: true,
-    ignoreHTTPSErrors: true,
-    dumpio: true,
-    //   ignoreSSL: true
-  };
+    "--enable-features=NetworkService",
+];
 
-  beforeEach(async () => {
-    browser = await puppeteer.launch(options);
+const options = {
+  args,
+  headless: false,
+  ignoreHTTPSErrors: true,
+  dumpio: true,
+  //   ignoreSSL: true
+};
 
-    const url = `http://localhost:3000/`;
-    const page = await browser.newPage();
-    await page.goto(url);
+beforeEach(async () => {
+  browser = await puppeteer.launch(options);
 
-  //  server = this.app.listen(port, () => resolve(port));
-  });
+  const url = `http://localhost:3000/`;
+  const page = await browser.newPage();
+  await page.goto(url);
+
+//  server = this.app.listen(port, () => resolve(port));
+});
 
   // afterEach(async () => {
   //   if (browser) await browser.close();
@@ -39,5 +41,5 @@ const args = [
   });
 
   afterAll(() => {
-  })  
+  })
 });
