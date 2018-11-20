@@ -16,7 +16,7 @@ const options = {
   headless: false,
   ignoreHTTPSErrors: true,
   dumpio: true,
-  //   ignoreSSL: true
+  ignoreSSL: true
 };
 
 beforeEach(async () => {
