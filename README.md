@@ -1,3 +1,11 @@
+README
+-----------------
+Test de Validation (traivs)
+[![Build Status](https://travis-ci.org/MartialDuv/CdP-2018-1_4.svg?branch=master)](https://travis-ci.org/MartialDuv/CdP-2018-1_4)
+
+
+Backlog
+-----------------
 | id | user story  | priorité | difficulté | sprint |
 |----|-------|-------------|------------|-------------|
 | #1 | En tant que visiteur, je souhaite pouvoir m'enregistrer en tant que développeur. Pour cela, je dois remplir un formulaire composé de : nom, prénom, mail, identifiant, mot de passe. Toutes les informations sont obligatoires lors de l'enregistrement.           |    moyenne      |    4     |   3     |
