@@ -1,9 +1,13 @@
+CREATE DATABASE docker;
+GRANT ALL PRIVILEGES ON DATABASE docker TO cdp;
+\c docker
+
 CREATE TABLE project (
 	project_id SERIAL,
 	name varchar(80) NOT NULL,
 	thematic varchar(255) NOT NULL,
 	owner varchar(80) NULL,
-	client varchar(80) NULL,
+	client varchar(80) NULL,	
 	nb_dev int NULL,
 	estimate_time varchar(80) NOT NULL,
 	PRIMARY KEY(project_id)
@@ -12,7 +16,7 @@ CREATE TABLE project (
 CREATE TABLE developer (
 	developer_id SERIAL,
 	last_name varchar(80) NOT NULL,
-	frist_name varchar(80) NOT NULL,
+	first_name varchar(80) NOT NULL,
 	email varchar(255) NOT NULL,
 	login varchar(40) NOT NULL,
 	password varchar(40) NOT NULL,
@@ -24,6 +28,7 @@ CREATE TABLE project_membership (
 	project_id int NOT NULL,
 	developer_id int NOT NULL,
 	PRIMARY KEY(project_id, developer_id),
+	FOREIGN KEY(project_id) REFERENCES project (project_id),
 	FOREIGN KEY(developer_id) REFERENCES developer (developer_id)
 );
 
