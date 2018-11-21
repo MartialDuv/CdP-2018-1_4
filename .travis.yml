@@ -18,8 +18,8 @@ notifications:
 
 before_install:
   - sudo docker-compose up -d
-  - npm install puppeteer
-  - npm install jasmine
+  - sudo npm install puppeteer
+  - sudo npm install jasmine
 
 
 script:
