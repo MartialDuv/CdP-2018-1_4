@@ -8,6 +8,9 @@ node_js:
 services :
   - docker
 
+cache: npm
+
+
 addons:
   apt:
     packages:
@@ -24,4 +27,4 @@ before_install:
 
 script:
   - curl localhost:3000
-  - yarn test
+  - npm run test

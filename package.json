@@ -4,8 +4,7 @@
   "description": "projet cdp",
   "main": "src/server.js",
   "scripts": {
-    "test": "jasmine spec/*.js",
-    "start": "node src/server.js"
+    "test": "jasmine spec/*.js"
   },
   "author": "",
   "license": "ISC",
