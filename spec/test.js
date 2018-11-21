@@ -4,11 +4,11 @@ const port = 3000;
 
 describe('Server', () => {
   let browser = undefined;
+  var page;
 //  let server = undefined;
 const args = [
     "--disable-setuid-sandbox",
     "--no-sandbox",
-    // "--enable-features=NetworkService",
 ];
 
 // const options = {
@@ -21,19 +21,18 @@ const args = [
 
 beforeEach(async () => {
   browser = await puppeteer.launch(args);
-
-  const url = `http://localhost:3000/`;
-  const page = await browser.newPage();
+  const url = 'http://localhost:3000/';
+  page = await browser.newPage();
   await page.goto(url);
 
 //  server = this.app.listen(port, () => resolve(port));
 });
 
-  afterEach(async () => {
-   await browser.close();
-  });
+  // afterEach(async () => {
+  //  await browser.close();
+  // });
 
-  it("jasmine puppeteer", async () => {
+  it("Test Title", async () => {
     const title = await page.title();
     expect(title).toBe('Accueil');
     // done();
