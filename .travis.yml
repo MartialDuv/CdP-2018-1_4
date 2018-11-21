@@ -8,9 +8,6 @@ node_js:
 services :
   - docker
 
-cache: npm
-
-
 addons:
   apt:
     packages:
@@ -21,6 +18,7 @@ notifications:
 
 before_install:
   - sudo docker-compose up -d
+  - npm update
   - npm install puppeteer
   - npm install jasmine
 

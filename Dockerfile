@@ -3,7 +3,7 @@ FROM node:10
 WORKDIR app/
 
 # Install app dependencies
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install
 
