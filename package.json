@@ -13,10 +13,7 @@
     "cors": "^2.8.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "markdown": "^0.5.0"
-  },
-  "devDependencies": {
-    "puppeteer": "1.9.0",
+    "markdown": "^0.5.0",
     "jasmine": "3.2.0"
   }
 }
