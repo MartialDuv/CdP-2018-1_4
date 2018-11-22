@@ -19,9 +19,7 @@ beforeEach(async () => {
 });
 
   it("Test Button", async () => {
-    const creaButton = await page.$('#btncreaproj input');
-    await creaButton.click();
-
+  
     await page.focus('#InputProjectName');
     await page.type('project');
     await page.focus('#InputTheme');
