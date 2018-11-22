@@ -16,8 +16,8 @@ Tâches du sprint 2
 | id | description | composant | chemin composant | id us | dépendances | état | développeur | chiffrage (en jh) |
 |----|------------|---------------|--------|----|----|----|-----|----|
 | T1 | Ajout du docker au projet. | docker.yml  |  docker.yml   |  x   |  x   | DONE | Mathieu, Mary, Martial | 1 |
-| T2 | Création du fichier project.sql. Ce script sera lancé avec docker pour initialiser la base de données. | project.sql |  src/bdd/project.sql | x |   x   | DONE | Mathieu  | 0.5 |
-| T3 | Implémentation du script project.sql qui crée les tables de la base de données ainsi que leur champs respectifs. |  project.sql |  src/bdd/project.sql| x |  T2  | DOING | Mathieu | 0.5 |
+| T2 | Création du fichier init.sql. Ce script sera lancé avec docker pour initialiser la base de données. Les tables à créer ainsi que leurs champs sont décrites dans le ficher Reference_BDD.md | project.sql |  src/sql/init.sql | x |   x   | DONE | Mathieu  | 0.5 |
+| T3 | Implémentation du script project.sql qui crée les tables de la base de données ainsi que leur champs respectifs. |  project.sql |  src/sql/init.sql| x |  T2  | DOING | Mathieu | 0.5 |
 | T4 | Création de la page d'accueil comprenant la liste des projets et la possibilité de créer un projet. Le bouton de création utilisera la route "/creaproject" pour rediriger vers le formulaire.  | index.ejs, index.js |  src/views/index.ejs, src/js/index.js | #3 |   x   | DOING | Mary | 0.5 |
 | T5 | Implémentation de l'ajout d'un projet dans la base de données lorsque le bouton "créer" est cliqué et redirection vers le formulaire de création. S'il manque un champ obligatoire, une alerte "remplir tous les champs obligatoires" s'affichent et le projet n'est pas créé. | creaproject.ejs, creaproject.js | src/views/creaproject.ejs, src/js/creaproject.js  | #3  | T3, T4 | DOING | Mary | 1 |
 | T6 | Création de la page d'ajout d'une user story. Les boutons de validation et d'annulation utiliseront la route "/backlog" pour revenir à la visualisation des user story. | add_us.ejs, add_us.js | src/views/add_us.ejs, src/js/add_us.js | #8 | x  | DOING | Martial | 0.5 |
