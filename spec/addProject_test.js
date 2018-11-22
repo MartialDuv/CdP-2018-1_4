@@ -18,9 +18,17 @@ beforeEach(async () => {
   await page.goto(url);
 });
 
-  it("Test Title", async () => {
-    const title = await page.title();
-    expect(title).toBe('Accueil');
+  it("Test Button", async () => {
+    await page.focus('#InputProjectName');
+    await page.type('project');
+    await page.focus('#InputTheme');
+    await page.type('theme');
+
+    const creaButton = await page.$('#btncreaproj input');
+    await creaButton.click();
+
+    // Wait if we get redirected to good page
+    await page.waitForNavigation();
     // done();
   });
 
