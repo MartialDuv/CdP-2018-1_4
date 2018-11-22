@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Création de projet</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script type="text/javascript" src="/creaproject.js" defer></script>
 </head>
 
 <body>
@@ -13,16 +16,19 @@
           <main>
               <div class="jumbotron">
                   <h1>Création du projet</h1>
-                  <p>Ici, on peut créer des projet et franchement on va pas se mentir c'est cool</p>
+                  <p>parce que c'est notre projet</p>
               </div>
           </main>
         </div>
         <hr class="my-6">
 
         <!-- body -->
-        <form>
+        <form method = "post" action = "/creaproject/project">
           <div class="form-group row">
-            <label for="InputProjectName" class="col-sm-3 col-form-label"><b>Nom<span style="color:#FF0000";>*</b></span></label>
+            <label for="InputProjectName" class="col-sm-3 col-form-label">
+              <b>Nom
+              <span style="color:#FF0000";>*</b></span>
+            </label>
             <div class="col-sm-6">
               <input type="projectName" class="form-control" id="InputProjectName">
             </div>
@@ -68,13 +74,32 @@
             <small id="ProjectHelp" class="form-text text-muted"><span style="color:#FF0000";>*</span> : Champs obligatoires</small>
           </div>
           <div class="text-center">
-            <a href="/project"><input type="button" class="btn btn-info btn-lg"
-            value = "Créer le projet"></a>
-            <a href="/"><input type="button" class="btn btn-danger btn-lg"
-            value = "Annuler"></a>
+            <!-- <a href="/project"> -->
+              <button type="button" class="btn btn-info btn-lg" id="btncreaproj">Créer le projet</button>
+          <!-- </a> -->
+            <a href="/">
+              <button type="button" class="btn btn-danger btn-lg">Annuler</button>
+          </a>
           </div>
         </form>
+      </div>
 
+      <!-- modal box-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Projet non Crée ! </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="ok">Ok</button>
+          </div>
+        </div>
+      </div>
       </div>
 
 </body>
