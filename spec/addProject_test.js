@@ -13,12 +13,15 @@ const args = [
 
 beforeEach(async () => {
   browser = await puppeteer.launch(args);
-  const url = 'http://localhost:3000/';
+  const url = 'http://localhost:3000/creaproject';
   page = await browser.newPage();
   await page.goto(url);
 });
 
   it("Test Button", async () => {
+    const creaButton = await page.$('#btncreaproj input');
+    await creaButton.click();
+
     await page.focus('#InputProjectName');
     await page.type('project');
     await page.focus('#InputTheme');
