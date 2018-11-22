@@ -19,14 +19,13 @@ beforeEach(async () => {
 });
 
   it("Test Button", async () => {
-  
-    await page.focus('#InputProjectName');
-    await page.type('project');
-    await page.focus('#InputTheme');
-    await page.type('theme');
 
-    const creaButton = await page.$('#btncreaproj input');
-    await creaButton.click();
+    //await page.focus('#InputProjectName');
+    await page.evaluate((ProjectName, Theme) => {
+      document.querySelector('#InputProjectName').value = ProjectName;
+      document.querySelector('#InputTheme').value = Theme;
+      document.querySelector('#btncreaproj').click();
+    }, ProjectName, Theme);
 
     // Wait if we get redirected to good page
     await page.waitForNavigation();
