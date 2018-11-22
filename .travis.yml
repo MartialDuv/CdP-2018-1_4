@@ -17,6 +17,7 @@ notifications:
   email: false
 
 before_install:
+  - sudo service postgresql stop
   - sudo docker-compose up -d
   - npm update
   - npm install puppeteer
