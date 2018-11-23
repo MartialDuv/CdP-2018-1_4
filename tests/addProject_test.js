@@ -16,24 +16,45 @@ const args = [
     "--no-sandbox",
 ];
 
-beforeEach(async () => {
-  browser = await puppeteer.launch(args);
+// beforeEach(async () => {
+//   browser = await puppeteer.launch(args);
+//   const url = 'http://localhost:3000/creaproject';
+//   page = await browser.newPage();
+//   await page.goto(url);
+// });
+//
+// it("Test add project", async () => {
+//   await page.waitForSelector('.creaproject-form');
+//   await page.click("input[type=projectName]");
+//   await page.type("input[type=projectName]", project.name);
+//   await page.click("input[type=theme]");
+//   await page.type("input[type=theme]", project.theme);
+//   await page.click("button[type=button]");
+//   // Wait if we get redirected to good page
+//   await page.waitForNavigation();
+// });
+//
+// afterAll(() => {
+// })
+// });
+
+beforeEach(function(done) {
+  browser = puppeteer.launch(args);
   const url = 'http://localhost:3000/creaproject';
-  page = await browser.newPage();
-  await page.goto(url);
+  page = browser.newPage();
+  page.goto(url);
+  done();
 });
 
-it("Test add project", async () => {
-  await page.waitForSelector('.creaproject-form');
-  await page.click("input[type=projectName]");
-  await page.type("input[type=projectName]", project.name);
-  await page.click("input[type=theme]");
-  await page.type("input[type=theme]", project.theme);
-  await page.click("button[type=button]");
+it("Test add us", function(done) {
+  page.waitForSelector('.creaproject-form');
+  page.click("input[type=projectName]");
+  page.type("input[type=projectName]", project.name);
+  page.click("input[type=theme]");
+  page.type("input[type=theme]", project.theme);
+  page.click("button[type=button]");
+
   // Wait if we get redirected to good page
-  await page.waitForNavigation();
-});
-
-afterAll(() => {
-})
+  page.waitForNavigation();
+  done();
 });
