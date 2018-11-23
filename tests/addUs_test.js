@@ -39,10 +39,10 @@ it("Test add us", async () => {
   // Wait if we get redirected to good page
   await page.waitForNavigation();
 });
-//
-//   afterAll(() => {
-//   })
-// });
+
+  afterAll(() => {
+  })
+});
 
 // beforeEach(function(done) {
 //   browser = puppeteer.launch(args);
