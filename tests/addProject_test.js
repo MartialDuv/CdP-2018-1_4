@@ -16,8 +16,18 @@ const args = [
     "--no-sandbox",
 ];
 
+let originalTimeout;
+beforeEach(function() {
+    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+});
+
+afterEach(function() {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+});
+
+
 beforeEach(async () => {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   browser = await puppeteer.launch(args);
   const url = 'http://localhost:3000/creaproject';
   page = await browser.newPage();
@@ -25,6 +35,7 @@ beforeEach(async () => {
 });
 
 it("Test add project", async () => {
+
   await page.waitForSelector('.creaproject-form');
   await page.click("input[type=projectName]");
   await page.type("input[type=projectName]", project.name);
@@ -38,24 +49,3 @@ it("Test add project", async () => {
 afterAll(() => {
 })
 });
-
-// beforeEach(function(done) {
-//   browser = puppeteer.launch(args);
-//   const url = 'http://localhost:3000/creaproject';
-//   page = browser.newPage();
-//   page.goto(url);
-//   done();
-// });
-//
-// it("Test add us", function(done) {
-//   page.waitForSelector('.creaproject-form');
-//   page.click("input[type=projectName]");
-//   page.type("input[type=projectName]", project.name);
-//   page.click("input[type=theme]");
-//   page.type("input[type=theme]", project.theme);
-//   page.click("button[type=button]");
-//
-//   // Wait if we get redirected to good page
-//   page.waitForNavigation();
-//   done();
-// });

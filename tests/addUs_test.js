@@ -18,6 +18,16 @@ const args = [
     "--no-sandbox",
 ];
 
+let originalTimeout;
+beforeEach(function() {
+    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+});
+
+afterEach(function() {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+});
+
 beforeEach(async () => {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   browser = await puppeteer.launch(args);
@@ -43,26 +53,3 @@ it("Test add us", async () => {
   afterAll(() => {
   })
 });
-
-// beforeEach(function(done) {
-//   browser = puppeteer.launch(args);
-//   const url = 'http://localhost:3000/add_us';
-//   page = browser.newPage();
-//   page.goto(url);
-//   done();
-// });
-//
-// it("Test add us", function(done) {
-//   page.waitForSelector('.addus-form');
-//   page.click("input[type=USId]");
-//   page.type("input[type=USId]", us.id);
-//   page.click("input[type=difficulty]");
-//   page.type("input[type=difficulty]", us.difficulty);
-//   page.click("textarea[type=description]");
-//   page.type("textarea[type=description]", us.description);
-//   page.click("button[type=button]");
-//
-//   // Wait if we get redirected to good page
-//   page.waitForNavigation();
-//   done();
-// });
