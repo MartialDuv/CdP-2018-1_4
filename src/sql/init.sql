@@ -9,7 +9,8 @@ CREATE TABLE project (
 	owner varchar(80) NULL,
 	client varchar(80) NULL,	
 	nb_dev int NULL,
-	estimate_time varchar(80) NOT NULL,
+	estimate_time varchar(80) NULL,
+	type_estimate_time varchar(10) NOT NULL,
 	PRIMARY KEY(project_id)
 );
 
