@@ -1,4 +1,6 @@
- const checkCreaproj = document.getElementById("btncreaproj")
+ const checkCreaproj = document.getElementById("btncreaproj");
+ const cancelCreaproj = document.getElementById("btncancelproj");
+
 
 function checkAndAdd() {
   // let name_proj = document.querySelector("#InputProjectName");
@@ -23,7 +25,10 @@ function checkAndAdd() {
 
 }
 
-// checkCreaproj.addEventListener('click',check);
 checkCreaproj.addEventListener('click',function() {
   checkAndAdd();
+});
+
+cancelCreaproj.addEventListener('click',function() {
+  document.location.href="/";
 });

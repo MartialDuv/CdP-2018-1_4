@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const faker = require('faker');
-// const Server = require('../../src/server');
 const port = 3000;
 
 const us = {
@@ -27,7 +26,6 @@ beforeEach(async () => {
 });
 
   it("Test add us", async () => {
-
     await page.waitForSelector('.addus-form');
     await page.click("input[type=USId]");
     await page.type("input[type=USId]", us.id);
