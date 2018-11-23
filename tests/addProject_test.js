@@ -17,6 +17,7 @@ const args = [
 ];
 
 beforeEach(async () => {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL =10000;
   browser = await puppeteer.launch(args);
   const url = 'http://localhost:3000/creaproject';
   page = await browser.newPage();
@@ -34,10 +35,6 @@ it("Test add project", async () => {
   // Wait if we get redirected to good page
   await page.waitForNavigation();
 });
-
-afterEach(function() {
-     jasmine.DEFAULT_TIMEOUT_INTERVAL =10000;
-   });
 
 afterAll(() => {
 })
