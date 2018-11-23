@@ -26,15 +26,15 @@ beforeEach(async () => {
   await page.goto(url);
 });
 
-  it("Test Button", async () => {
+  it("Test add us", async () => {
 
     await page.waitForSelector('.addus-form');
     await page.click("input[type=USId]");
     await page.type("input[type=USId]", us.id);
     await page.click("input[type=difficulty]");
     await page.type("input[type=difficulty]", us.difficulty);
-    await page.click("input[type=description]");
-    await page.type("input[type=description]", us.description);
+    await page.click("textarea[type=description]");
+    await page.type("textarea[type=description]", us.description);
     await page.click("button[type=button]");
 
     // Wait if we get redirected to good page

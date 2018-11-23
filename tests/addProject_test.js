@@ -23,7 +23,7 @@ beforeEach(async () => {
   await page.goto(url);
 });
 
-  it("Test Button", async () => {
+  it("Test add project", async () => {
 
     await page.waitForSelector('.creaproject-form');
     await page.click("input[type=projectName]");
