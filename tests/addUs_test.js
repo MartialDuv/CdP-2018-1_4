@@ -50,6 +50,6 @@ it("Test add us", async () => {
   await page.waitForNavigation();
 });
 
-  afterAll(() => {
-  })
+afterAll(() => {
+})
 });

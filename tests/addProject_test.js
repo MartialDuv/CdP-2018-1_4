@@ -14,7 +14,7 @@ describe('Server', () => {
 const args = [
     "--disable-setuid-sandbox",
     "--no-sandbox",
-];
+  ];
 
 let originalTimeout;
 beforeEach(function() {
@@ -26,7 +26,6 @@ afterEach(function() {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
 });
 
-
 beforeEach(async () => {
   browser = await puppeteer.launch(args);
   const url = 'http://localhost:3000/creaproject';
@@ -35,7 +34,6 @@ beforeEach(async () => {
 });
 
 it("Test add project", async () => {
-
   await page.waitForSelector('.creaproject-form');
   await page.click("input[type=projectName]");
   await page.type("input[type=projectName]", project.name);
