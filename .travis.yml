@@ -23,6 +23,7 @@ notifications:
 before_install:
   - sudo service postgresql stop
   - sudo docker-compose up -d
+  - sleep 10
   - npm update
   - npm install puppeteer
   - npm install jasmine
