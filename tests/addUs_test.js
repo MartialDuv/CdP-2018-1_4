@@ -18,16 +18,6 @@ const args = [
     "--no-sandbox",
 ];
 
-let originalTimeout;
-beforeEach(function() {
-    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
-});
-
-afterEach(function() {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
-});
-
 beforeEach(async () => {
   browser = await puppeteer.launch(args);
   const url = 'http://localhost:3000/add_us';

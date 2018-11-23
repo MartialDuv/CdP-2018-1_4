@@ -16,17 +16,6 @@ const args = [
     "--no-sandbox",
 ];
 
-let originalTimeout;
-beforeEach(function() {
-    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
-});
-
-afterEach(function() {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
-});
-
-
 beforeEach(async () => {
   browser = await puppeteer.launch(args);
   const url = 'http://localhost:3000/creaproject';
@@ -35,7 +24,6 @@ beforeEach(async () => {
 });
 
 it("Test add project", async () => {
-
   await page.waitForSelector('.creaproject-form');
   await page.click("input[type=projectName]");
   await page.type("input[type=projectName]", project.name);
