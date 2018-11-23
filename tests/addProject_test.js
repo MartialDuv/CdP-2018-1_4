@@ -33,7 +33,7 @@ beforeEach(async () => {
     await page.click("button[type=button]");
     // Wait if we get redirected to good page
     await page.waitForNavigation();
-    // done();
+    done();
   });
 
   afterAll(() => {

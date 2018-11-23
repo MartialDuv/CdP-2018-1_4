@@ -37,7 +37,7 @@ beforeEach(async () => {
 
     // Wait if we get redirected to good page
     await page.waitForNavigation();
-    // done();
+    done();
   });
 
   afterAll(() => {
