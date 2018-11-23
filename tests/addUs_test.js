@@ -19,7 +19,7 @@ const args = [
 ];
 
 beforeEach(async () => {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL =10000;
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 9999999;
   browser = await puppeteer.launch(args);
   const url = 'http://localhost:3000/add_us';
   page = await browser.newPage();
