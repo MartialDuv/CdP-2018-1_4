@@ -1,10 +1,13 @@
 const puppeteer = require('puppeteer');
 const faker = require('faker');
+// const Server = require('../../src/server');
 const port = 3000;
 
-const project = {
-   name: faker.name.findName(),
-   theme: faker.name.findName(),
+const us = {
+   id: faker.name.findName(),
+   difficulty: faker.name.findName(),
+   description: faker.name.findName(),
+
 };
 
 describe('Server', () => {
@@ -18,19 +21,22 @@ const args = [
 
 beforeEach(async () => {
   browser = await puppeteer.launch(args);
-  const url = 'http://localhost:3000/creaproject';
+  const url = 'http://localhost:3000/add_us';
   page = await browser.newPage();
   await page.goto(url);
 });
 
   it("Test Button", async () => {
 
-    await page.waitForSelector('.creaproject-form');
-    await page.click("input[type=projectName]");
-    await page.type("input[type=projectName]", project.name);
-    await page.click("input[type=theme]");
-    await page.type("input[type=theme]", project.theme);
+    await page.waitForSelector('.addus-form');
+    await page.click("input[type=USId]");
+    await page.type("input[type=USId]", us.id);
+    await page.click("input[type=difficulty]");
+    await page.type("input[type=difficulty]", us.difficulty);
+    await page.click("input[type=description]");
+    await page.type("input[type=description]", us.description);
     await page.click("button[type=button]");
+
     // Wait if we get redirected to good page
     await page.waitForNavigation();
     // done();
