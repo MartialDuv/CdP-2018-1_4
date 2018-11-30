@@ -16,6 +16,8 @@ addons:
   apt:
     packages:
       - docker-ce
+  sonarcloud:
+    organization: "sonarcloud"
 
 notifications:
   email: false
@@ -27,8 +29,9 @@ before_install:
   - npm update
   - npm install puppeteer
   - npm install jasmine
-
+  - npm install sonar-scanner@3.1.0
 
 script:
   - curl localhost:3000
   - npm run test
+  - sonar-scanner
