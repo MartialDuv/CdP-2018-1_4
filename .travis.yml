@@ -34,4 +34,4 @@ before_install:
 script:
   - curl localhost:3000
   - npm run test
-  - sonar-scanner \-Dsonar.projectKey=MartialDuv_CdP-2018-1_4 \-Dsonar.organization=martialduv-github \-Dsonar.sources=. \-Dsonar.host.url=https://sonarcloud.io \-Dsonar.login=c03c90676c334bdfcedfc62f8360b454bbace44c
+  - sonar-scanner -Dsonar.projectKey=CdP-2018-1_4 -Dsonar.organization=myra282-github -Dsonar.sources=src/js/ -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=56b7844a6f61a6fe367a3785f676db6d12a7bef6
