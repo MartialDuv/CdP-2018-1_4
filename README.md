@@ -16,10 +16,10 @@ Test :
   
    [![Build Status](https://travis-ci.org/MartialDuv/CdP-2018-1_4.svg?branch=master)](https://travis-ci.org/MartialDuv/CdP-2018-1_4)
           
- Qualité du code effectué avec Sonar:
+ Contrôle de qualité du code effectué avec Sonar:
  
    [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CdP-2018-1_4&metric=alert_status)](https://sonarcloud.io/dashboard?id=CdP-2018-1_4)
           
-   [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=CdP-2018-1_4&metric=code_smells)](https://sonarcloud.io/dashboard?id=CdP-2018-1_4)
-   
    [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=CdP-2018-1_4&metric=bugs)](https://sonarcloud.io/dashboard?id=CdP-2018-1_4)
+   
+  [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=CdP-2018-1_4&metric=code_smells)](https://sonarcloud.io/dashboard?id=CdP-2018-1_4)
