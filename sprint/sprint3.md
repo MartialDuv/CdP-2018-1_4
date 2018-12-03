@@ -66,4 +66,5 @@ Tâches du sprint 3
 --
 | id | description | composant | chemin composant | id us | dépendances | état | développeur | chiffrage (en jh) |
 |----|------------|---------------|--------|----|----|----|-----|----|
-| T21 | Ajout d'un linter au projet pour vérifier le code (eslint)| x  | x | x | x | DOING | Mary | 1 |
+| T21 | Ajout de sonar au projet pour contrôler la qualité du code | x  | x | x | x | DONE | Mary | 1 |
+| T22 | Ajout d'un linter au projet pour vérifier le code (eslint)| x  | x | x | x | DOING | Mary | 1 |
