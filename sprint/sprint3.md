@@ -68,3 +68,10 @@ Tâches du sprint 3
 |----|------------|---------------|--------|----|----|----|-----|----|
 | T21 | Ajout de sonar au projet pour contrôler la qualité du code | x  | x | x | x | DONE | Mary | 1 |
 | T22 | Ajout d'un linter au projet pour vérifier le code (eslint)| x  | x | x | x | DOING | Mary | 1 |
+| T23 | Implémentation des boutons d'enregistrement et de connexion d'un développeur sur la page d'accueil. Lorsqu'ils sont cliqués, ils redirigent vers le formulaire approprié. | index.ejs | src/views/index.ejs | #1, #2 | x | TO DO | x | 1 |
+| T24 | Création de la page du formulaire d'enregistrement d'un développeur. Le bouton de validation utilisera la route "/" pour revenir à la visualisation des projets.  | add_dev.ejs, add_dev.js | src/views/add_dev.ejs, src/js/add_dev.js | #1 | x | TO DO | x | 0.5 |
+| T25 | Implémentation du formulaire d'enregistrement d'un développeur. S'il manque un champ obligatoire, une alerte "remplir tous les champs obligatoires" s'affiche et le développeur n'est pas enregistré. Le développeur est ajouté dans la base de données en appuyant sur le bouton "Enregistrer". | add_dev.ejs | src/views/add_dev.ejs | #1 | x | TO DO | T23 | 1 |
+| T26 | Création de la page du formulaire de connexion d'un développeur qui demande de remplir le login ou l'email et le mot de passe. Le bouton de validation utilisera la route "/" pour revenir à la visualisation des projets.  | add_dev.ejs, add_dev.js | src/views/add_dev.ejs, src/js/add_dev.js | #1 | x | TO DO | x | 0.5 |
+| T27 | Implémentation du formulaire de connexion d'un développeur. S'il manque un champ obligatoire, une alerte "remplir tous les champs obligatoires" s'affiche et le développeur n'est pas connecté. L'existance du développeur dans la base de données est vérifiée en appuyant sur le bouton "Connexion". | connect_dev.ejs | src/views/connect_dev.ejs | #1 | T23 | TO DO | x | 1 |
+
+
