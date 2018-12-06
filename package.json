@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "test": "jasmine tests/*.js",
-     "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "author": "",
   "license": "ISC",
@@ -17,9 +17,9 @@
     "faker": "^4.1.0",
     "jasmine": "3.2.0",
     "markdown": "^0.5.0",
-    "pg": "^7.6.1"
+    "pg": "7.0.0"
   },
   "devDependencies": {
     "sonar-scanner": "^3.1.0"
-}
+  }
 }

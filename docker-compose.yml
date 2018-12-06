@@ -10,8 +10,12 @@ services:
       - "3000:3000"
     depends_on:
       - postgres
-  #  environment:
+    environment:
   #    DATABASE_URL: postgres://cdpapp@postgres/cdp
+      SEQ_USER: cdp
+      DATABASE_URL: postgres://cdp@postgres:5432/docker
+      PORT: 3000
+
   postgres:
     image: postgres:9.6.2-alpine
     volumes:
@@ -19,5 +23,6 @@ services:
     environment:
       - POSTGRES_USER=cdp
       - POSTGRES_PASSWORD=
+      - POSTGRES_DB=docker
     ports:
       - 5432:5432

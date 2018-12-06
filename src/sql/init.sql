@@ -7,7 +7,7 @@ CREATE TABLE project (
 	name varchar(80) NOT NULL,
 	thematic varchar(255) NOT NULL,
 	owner varchar(80) NULL,
-	client varchar(80) NULL,	
+	client varchar(80) NULL,
 	nb_dev int NULL,
 	estimate_time varchar(80) NULL,
 	type_estimate_time varchar(10) NOT NULL,

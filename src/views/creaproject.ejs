@@ -23,44 +23,44 @@
         <hr class="my-6">
 
         <!-- body -->
-        <form method = "post" action = "/creaproject/project" class = "creaproject-form">
+        <form method = "post" action = "/creaproject" class = "creaproject-form">
           <div class="form-group row">
             <label for="InputProjectName" class="col-sm-3 col-form-label">
               <b>Nom
               <span style="color:#FF0000";>*</b></span>
             </label>
             <div class="col-sm-6">
-              <input type="projectName" class="form-control" id="InputProjectName">
+              <input type="text" name="name" class="form-control" id="InputProjectName">
             </div>
           </div>
           <div class="form-group row">
             <label for="InputTheme" class="col-sm-3 col-form-label"><b>Thématique<span style="color:#FF0000";>*</b></span></label>
             <div class="col-sm-6">
-              <input type="theme" class="form-control" id="InputTheme">
+              <input type="text" name="thematic" class="form-control" id="InputTheme">
             </div>
           </div>
           <div class="form-group row">
             <label for="InputOwner" class="col-sm-3 col-form-label"><b>Propriétaire</b></label>
             <div class="col-sm-6">
-              <input type="owner" class="form-control" id="InputOwner">
+              <input type="text" name="owner" class="form-control" id="InputOwner">
             </div>
           </div>
           <div class="form-group row">
             <label for="InputClient" class="col-sm-3 col-form-label"><b>Client</b></label>
             <div class="col-sm-6">
-              <input type="client" class="form-control" id="InputClient">
+              <input type="text" name="client" class="form-control" id="InputClient">
             </div>
           </div>
           <div class="form-group row">
             <label for="InputNbDeveloper" class="col-sm-3 col-form-label"><b>Nombre de développeurs</b></label>
             <div class="col-sm-1">
-              <input type="nbdeveloper" class="form-control" id="InputNbDeveloper">
+              <input type="text" name="developper" class="form-control" id="InputNbDeveloper">
             </div>
           </div>
           <div class="form-group row">
             <label for="InputDuration" class="col-sm-3 col-form-label"><b>Estimation de la durée</b></label>
             <div class="col-sm-1">
-              <input type="client" class="form-control" id="InputDuration">
+              <input type="text" class="form-control" id="InputDuration">
             </div>
             <div class="col-sm-1">
             <select class="form-control" id="selectPriority">
@@ -77,6 +77,8 @@
               <button type="button" class="btn btn-info btn-lg" id="btncreaproj">Créer le projet</button>
               <button type="button" class="btn btn-danger btn-lg" id ="btncancelproj">Annuler</button>
           </div>
+          <div id="notif"></div>
+
         </form>
       </div>
 
