@@ -43,7 +43,7 @@ function checkAndAdd() {
   }
   else {
     console.log("champ rempli !");
-    //document.location.href="/creaproject/project";
+    document.location.href="/project";
  }
 }
 

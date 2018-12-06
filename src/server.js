@@ -56,7 +56,7 @@ app.post('/creaproject', function(req, res) {
 });
 
 
-app.get('/creaproject/project', function(req, res) {
+app.get('/project', function(req, res) {
   res.render('project');
 });
 
