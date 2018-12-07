@@ -33,10 +33,10 @@ function addProject() {
 function checkAndAdd() {
 
   if(name.value === "" || thematic.value === ""){
-      alert("Vous n'avez pas rempli tous les champs !");
+      alert("Tous les champs obligatoires ne sont pas remplis !");
   }
   else {
-    console.log("champ rempli !");
+    console.log("champs remplis !");
     document.location.href="/project";
  }
 }
