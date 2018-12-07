@@ -35,10 +35,10 @@ beforeEach(async () => {
 
 it("Test add project", async () => {
   await page.waitForSelector('.creaproject-form');
-  await page.click("input[type=projectName]");
-  await page.type("input[type=projectName]", project.name);
-  await page.click("input[type=theme]");
-  await page.type("input[type=theme]", project.theme);
+  await page.click("input[id=InputProjectName]");
+  await page.type("input[id=InputProjectName]", project.name);
+  await page.click("input[id=InputTheme]");
+  await page.type("input[id=InputTheme]", project.theme);
   await page.click("button[type=button]");
   // Wait if we get redirected to good page
   await page.waitForNavigation();

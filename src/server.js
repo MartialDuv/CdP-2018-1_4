@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const pg = require('pg');
-//const connectionString = 'postgres://localhost:5432/docker';
 const config = {
     user: 'cdp',
     database: 'docker',
@@ -34,8 +33,6 @@ app.get('/creaproject', function(req, res) {
 app.post('/creaproject', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
 
-  // const client = new pg.Client(connectionString);
-  // client.connect();
   console.log(req.body.name);
 
   pool.connect(function (err, client, done) {

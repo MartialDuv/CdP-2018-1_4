@@ -1,7 +1,5 @@
 const checkCreaproj = document.getElementById("btncreaproj");
 const cancelCreaproj = document.getElementById("btncancelproj");
-const notif =  document.createElement("p");
-const notified = document.querySelector("#notif");
 
 let name = document.getElementById("InputProjectName");
 let thematic = document.getElementById("InputTheme");
@@ -9,8 +7,6 @@ let owner = document.getElementById("InputOwner");
 let client = document.getElementById("InputClient");
 let nb_dev = document.getElementById("InputNbDeveloper");
 let estimate_time = document.getElementById("InputDuration");
-
-//let url = 'http://localhost:3000/creaproject?format=json&callback=?';
 
 function addProject() {
   $.ajax({
@@ -27,10 +23,9 @@ function addProject() {
       }),
       dataType: 'json',
       success: function(data) {
-       console.log("recupéré! !");
       },
       error:function(error){
-        console.log("Error:"+JSON.stringify(error));
+        console.log("Error:"+error);
       }
    });
 }
@@ -38,7 +33,6 @@ function addProject() {
 function checkAndAdd() {
 
   if(name.value === "" || thematic.value === ""){
-      //$('#exampleModal').modal('show');
       alert("Vous n'avez pas rempli tous les champs !");
   }
   else {
