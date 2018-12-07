@@ -12,7 +12,7 @@ services:
       - postgres
     environment:
   #    DATABASE_URL: postgres://cdpapp@postgres/cdp
-      SEQ_USER: cdp
+#      SEQ_USER: cdp
       DATABASE_URL: postgres://cdp@postgres:5432/docker
       PORT: 3000
 

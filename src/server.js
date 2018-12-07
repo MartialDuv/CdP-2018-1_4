@@ -36,6 +36,7 @@ app.post('/creaproject', function(req, res) {
 
   // const client = new pg.Client(connectionString);
   // client.connect();
+  console.log(req.body.name);
 
   pool.connect(function (err, client, done) {
       if (err) {
@@ -46,9 +47,9 @@ app.post('/creaproject', function(req, res) {
 
       pool.query(insert, values, (err, res) => {
         if (err) {
-          console.log(err.stack)
+          console.log(err.stack);
         } else {
-          console.log(res.rows[0])
+          console.log(res.rows[0]);
         }
       })
       done();
