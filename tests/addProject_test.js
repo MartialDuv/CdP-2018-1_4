@@ -3,8 +3,8 @@ const faker = require('faker');
 const port = 3000;
 
 const project = {
-   name: faker.name.findName(),
-   theme: faker.name.findName(),
+   name: faker.hacker.abbreviation(),
+   theme: faker.hacker.adjective(),
 };
 
 describe('Server', () => {
@@ -26,10 +26,19 @@ afterEach(function() {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
 });
 
+
 beforeEach(async () => {
-  browser = await puppeteer.launch(args);
+  browser = await puppeteer.launch(/*args,*/
+    {
+      headless: false,
+      slowMo: 80
+    });
   const url = 'http://localhost:3000/creaproject';
   page = await browser.newPage();
+  await page.setViewport({
+		width: 1000,
+		height: 768
+});
   await page.goto(url);
 });
 
@@ -37,11 +46,20 @@ it("Test add project", async () => {
   await page.waitForSelector('.creaproject-form');
   await page.click("input[id=InputProjectName]");
   await page.type("input[id=InputProjectName]", project.name);
-  await page.click("input[id=InputTheme]");
-  await page.type("input[id=InputTheme]", project.theme);
-  await page.click("button[type=button]");
+
+ //  await page.click("button[type=button]");
+ //  await page.on('dialog', dialog => {
+ //   dialog.dismiss();
+ // })
+ await page.click("input[id=InputTheme]");
+ await page.type("input[id=InputTheme]", project.theme);
+ await page.click("button[type=button]");
+ await page.waitForNavigation();
+
   // Wait if we get redirected to good page
-  await page.waitForNavigation();
+  // await page.goto(url+'/project');
+  //await page.waitForNavigation();
+  browser.close();
 });
 
 afterAll(() => {
