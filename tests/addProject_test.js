@@ -19,7 +19,7 @@ const args = [
 let originalTimeout;
 beforeEach(function() {
     originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 3000;
 });
 
 afterEach(function() {
@@ -28,11 +28,12 @@ afterEach(function() {
 
 
 beforeEach(async () => {
-  browser = await puppeteer.launch(/*args,*/
+  browser = await puppeteer.launch(/*args*/
     {
       headless: false,
       slowMo: 80
-    });
+    }
+  );
   const url = 'http://localhost:3000/creaproject';
   page = await browser.newPage();
   await page.setViewport({
@@ -42,26 +43,20 @@ beforeEach(async () => {
   await page.goto(url);
 });
 
-it("Test add project", async () => {
+it("Test add project", async() => {
   await page.waitForSelector('.creaproject-form');
   await page.click("input[id=InputProjectName]");
   await page.type("input[id=InputProjectName]", project.name);
-
- //  await page.click("button[type=button]");
- //  await page.on('dialog', dialog => {
- //   dialog.dismiss();
- // })
- await page.click("input[id=InputTheme]");
- await page.type("input[id=InputTheme]", project.theme);
- await page.click("button[type=button]");
- await page.waitForNavigation();
-
+  await page.click("input[id=InputTheme]");
+  await page.type("input[id=InputTheme]", project.theme);
+  await page.click("button[type=button]");
+  await page.waitForNavigation();
   // Wait if we get redirected to good page
   // await page.goto(url+'/project');
-  //await page.waitForNavigation();
-  browser.close();
 });
 
-afterAll(() => {
+
+afterEach(async() => {
+ await browser.close();
 })
 });
