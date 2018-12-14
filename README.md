@@ -2,6 +2,7 @@ README
 -----------------
 
 Lancement de projet :
+          
           - Initialisation des composants de l'application
                             $ docker-compose up
 
