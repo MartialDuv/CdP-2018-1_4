@@ -1,5 +1,6 @@
 README
 -----------------
+Explication de l'arborescence du projet dans spec/spec.md
 
 Lancement de projet :
           
@@ -8,7 +9,6 @@ Lancement de projet :
 
           - Utilisation de l'application (Page d'accueil) :
                   Sur votre navigateur web : http://localhost:3000
-
 
 Test :
 
